@@ -20,8 +20,9 @@ if __name__ == "__main__":
     start = time.time()
 
     str = model.ocr_from_image(imgPath=imgPath)
+    result = Converter(str=str).convert()
 
     end = time.time()
 
-    print(str)
-    print('Time: {}'.format(end-start))
+    print(result)
+    print('Time: {}s'.format(end-start))
