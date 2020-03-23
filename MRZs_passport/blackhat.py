@@ -1,6 +1,6 @@
 # Example of using Blackhat Morphological Transformation using OpenCV
 # USAGE
-# python blackhat.py --image j.png
+# python blackhat.py --image mrz_original.jpg
 import cv2
 import argparse
 import numpy as np 
@@ -18,4 +18,4 @@ kernel = np.ones((5, 5), np.uint8)
 # Black Hat is the difference between the closing of the input image and input image
 blackhat = cv2.morphologyEx(img, cv2.MORPH_BLACKHAT, kernel)
 
-cv2.imwrite("j_blackhat.png", blackhat)
+cv2.imwrite("mrz_blackhat.png", blackhat)
