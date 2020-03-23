@@ -1,6 +1,6 @@
 # Example of using Erosion Morphological Transformation using OpenCV
 # USAGE
-# python erosion --image j.png
+# python erosion.py --image j.png
 import cv2
 import argparse
 import numpy as np 

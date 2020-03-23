@@ -1,4 +1,4 @@
-# Example of using Erosion Morphological Transformation using OpenCV
+# Example of using Dilation Morphological Transformation using OpenCV
 # USAGE
 # python dilation.py --image j.png
 import cv2
