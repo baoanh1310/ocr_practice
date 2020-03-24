@@ -1,0 +1,13 @@
+# Problem: Recognize seven-segment display digits on a thermostat image.
+
++ No machine learning.
+
++ Pure OpenCV and image processing techniques.
+
++ Step 1: Localize the LCD on the thermostat. This can be done using edge detection since there is enough contrast between the plastic shell and the LCD.
+
++ Step 2: Extract the LCD. Given an input edge map, find contours and look for outlines with a rectangular shape - the largest rectangular region should correspond to the LCD. A perspective transform will give a nice extraction of the LCD.
+
++ Step 3: Extract the digit regions. Once we have the LCD itself we can focus on extracting the digits. Since there seems to be contrast between the digit regions and the background of the LCD, we're confident that thresholding and morphological operations can accomplish this.
+
++ Step 4: Identify the digits. Recognizing the actual digits with OpenCV will involve dividing the digit ROI into seven segments. From there, we can apply pixel counting on the thresholded image to determine if a given segment is "on" or "off".
