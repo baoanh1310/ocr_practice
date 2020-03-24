@@ -55,4 +55,3 @@ for imagePath in paths.list_images(args["images"]):
 	p = int(image.shape[1] * 0.05)
 	thresh[:, 0:p] = 0
 	thresh[:, image.shape[1]-p:] = 0
-	cv2.imwrite("mrz_one_rect.png", thresh)
